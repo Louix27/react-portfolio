@@ -7,6 +7,10 @@ import {
 import { useState, useEffect } from "react";
 import { FaLaptopCode } from "react-icons/fa";
 import deved from "../public/louis.png";
+import { IoLanguageSharp } from "react-icons/io5";
+import { GoDatabase } from "react-icons/go";
+import { RiToolsFill } from "react-icons/ri";
+import { IoTerminalOutline } from "react-icons/io5";
 import code from "../public/code.png";
 import design from "../public/design.png";
 import consulting from "../public/consulting.png";
@@ -114,6 +118,65 @@ export default function Home() {
             </div>
             <div className="mt-10 md:mt-0 bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden md:h-96 md:w-96 md:ml-40 ">
               <Image src={deved} layout="fill" objectFit="cover" />
+            </div>
+          </div>
+        </section>
+        <section id="competences" className="py-10 relative mb-20">
+          <div className="absolute inset-0 bg-gray-600 opacity-50 rounded-lg"></div> {/* Background with low opacity */}
+          <div className="relative z-10">
+            <h3 className="text-3xl py-1 text-teal-400 text-center mb-10">{language === "fr" ? "Mes Compétences" : "My Skills"}</h3> {/* Added mb-10 for margin bottom */}
+            <div className="flex flex-col items-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                  <div className="flex justify-center items-center">
+                    <IoTerminalOutline className="text-teal-400 text-9xl" /> {/* Icon added */}
+                  </div>
+                  <h4 className="text-xl font-medium text-white">{language === "fr" ? "Développement Web" : "Web Development"}</h4>
+                  <ul className="list-disc list-inside text-gray-400 text-left mx-auto w-max"> {/* Align text to the left */}
+                    <li>HTML/CSS</li>
+                    <li>React</li>
+                    <li>Tailwindcss</li>
+                    <li>Laravel</li>
+                  </ul>
+                </div>
+                <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                  <div className="flex justify-center items-center">
+                    <IoLanguageSharp className="text-teal-400 text-9xl" /> {/* Icon added */}
+                  </div>
+                  <h4 className="text-xl font-medium text-white">{language === "fr" ? "Langages Informatiques" : "Programming Languages"}</h4>
+                  <ul className="list-disc list-inside text-gray-400 text-left mx-auto w-max"> {/* Align text to the left */}
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>HTML/CSS</li>
+                  </ul>
+                </div>
+                <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                  <div className="flex justify-center items-center">
+                    <RiToolsFill className="text-teal-400 text-9xl" /> {/* Icon added */}
+                  </div>
+                  <h4 className="text-xl font-medium text-white">{language === "fr" ? "Outils Informatiques" : "IT Tools"}</h4>
+                  <ul className="list-disc list-inside text-gray-400 text-left mx-auto w-max"> {/* Align text to the left */}
+                    <li>Git</li>
+                    <li>Github</li>
+                    <li>Gitlab</li>
+                    <li>Jenkins</li>
+                  </ul>
+                </div>
+                <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                  <div className="flex justify-center items-center">
+                    <GoDatabase className="text-teal-400 text-9xl" /> {/* Icon added */}
+                  </div>
+                  <h4 className="text-xl font-medium text-white">{language === "fr" ? "Gestion de Base de Donées" : "Database Management"}</h4>
+                  <ul className="list-disc list-inside text-gray-400 text-left mx-auto w-max"> {/* Align text to the left */}
+                    <li>SQL</li>
+                    <li>PostgresSQL</li>
+                    <li>Triggers</li>
+                    <li>Fonctions</li>
+                  </ul>
+                </div>
+              </div>
+              
             </div>
           </div>
         </section>
