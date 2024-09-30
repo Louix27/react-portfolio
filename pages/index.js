@@ -15,6 +15,7 @@ import code from "../public/code.png";
 import design from "../public/design.png";
 import consulting from "../public/consulting.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const [showHeader, setShowHeader] = useState(true);
@@ -176,7 +177,11 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              
+              <Link href="/more-skills">
+                <a className="mt-10 px-6 py-2 bg-teal-400 text-white rounded-lg">
+                  {language === "fr" ? "Voir plus" : "See more"}
+                </a>
+              </Link>
             </div>
           </div>
         </section>
